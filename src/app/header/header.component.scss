@@ -1,0 +1,21 @@
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  width: 100%;
+  background-color: #7096ce;
+  box-shadow: 0px 10px 20px 5px rgb(35, 35, 35);
+  animation: 10s linear 0s infinite alternate shadow;
+}
+
+@keyframes shadow {
+  from {
+    box-shadow: 0px 10px 20px 5px rgb(35, 35, 35);
+  }
+  to {
+    box-shadow: 0px 10px 20px 5px rgb(168, 13, 13);
+  }
+}
