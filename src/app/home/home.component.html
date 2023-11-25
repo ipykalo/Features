@@ -1,1 +1,14 @@
-<p>home works!</p>
+<app-header (toggleMenu)="sidenav.toggle()"></app-header>
+<mat-sidenav-container [hasBackdrop]="true" class="sidenav-container">
+  <mat-sidenav
+    #sidenav
+    fixedInViewport="true"
+    fixedTopGap="100"
+    mode="side"
+    opened="true"
+  >
+  Start
+  End
+</mat-sidenav>
+  <mat-sidenav-content>Main</mat-sidenav-content>
+</mat-sidenav-container>

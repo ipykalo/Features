@@ -1,0 +1,22 @@
+:host {
+
+  .sidenav-container {
+    display: flex;
+    top: 100px;
+    height: 100%;
+
+    mat-sidenav {
+      width: 200px;
+      height: 100vh;
+      overflow-y: auto;
+      background-color: #f4f4f4;
+      padding: 20px;
+      color: black;
+    }
+  
+    mat-sidenav-content {
+      flex: 1;
+      padding: 20px;
+    }
+  }
+}
