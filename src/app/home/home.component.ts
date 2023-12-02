@@ -8,9 +8,14 @@ import { LoginComponent } from '../login/login.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, MatSidenavModule, HeaderComponent, MatButtonModule, LoginComponent],
+  imports: [
+    CommonModule,
+    MatSidenavModule,
+    HeaderComponent,
+    MatButtonModule,
+    LoginComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-}
+export class HomeComponent {}
