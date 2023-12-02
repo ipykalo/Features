@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HeaderComponent } from '../header/header.component';
 import { MatButtonModule } from '@angular/material/button';
-import { LoginComponent } from '../login/login.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +13,7 @@ import { LoginComponent } from '../login/login.component';
     MatSidenavModule,
     HeaderComponent,
     MatButtonModule,
-    LoginComponent,
+    RouterOutlet,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

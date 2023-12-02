@@ -11,6 +11,9 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
+import { AuthService, Session } from './auth.service';
+import { Router } from '@angular/router';
+import { RoutesConstant } from '../constants/routes.constant';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -31,6 +34,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   selector: 'app-login',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, MatInputModule, MatButtonModule],
+  providers: [],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
@@ -41,5 +45,20 @@ export class LoginComponent {
   });
   public matcher = new MyErrorStateMatcher();
 
-  login() {}
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
+
+  login(): void {
+    const { email, password } = this.form.getRawValue();
+    if (!email || !password) {
+      return;
+    }
+    this.authService.login(email, password).subscribe((session: Session) => {
+      if (session.access_token) {
+        this.router.navigate([RoutesConstant.Home]);
+      }
+    });
+  }
 }
