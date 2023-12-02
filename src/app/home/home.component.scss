@@ -1,5 +1,5 @@
 :host {
-  .sidenav-container {
+  mat-sidenav-container {
     display: flex;
     top: 100px;
     height: 100%;
@@ -16,6 +16,11 @@
     mat-sidenav-content {
       flex: 1;
       padding: 20px;
+    }
+
+    &.mat-drawer-container {
+      color: var(--mat-sidenav-content-text-color);
+      background-color: #c6cbc9;
     }
   }
 }
