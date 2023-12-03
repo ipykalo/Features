@@ -1,34 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
-  FormGroupDirective,
-  NgForm,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import { ErrorStateMatcher } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { AuthService, Session } from './auth.service';
 import { Router } from '@angular/router';
 import { RoutesConstant } from '../constants/routes.constant';
-
-/** Error when invalid control is dirty, touched, or submitted. */
-export class MyErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(
-    control: FormControl | null,
-    form: FormGroupDirective | NgForm | null
-  ): boolean {
-    const isSubmitted = form && form.submitted;
-    return !!(
-      control &&
-      control.invalid &&
-      (control.dirty || control.touched || isSubmitted)
-    );
-  }
-}
+import { CustomErrorStateMatcher } from '../core/forms/error-state-matcher';
 
 @Component({
   selector: 'app-login',
@@ -37,13 +20,14 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   providers: [],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent {
   public form = inject(FormBuilder).group({
     email: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
   });
-  public matcher = new MyErrorStateMatcher();
+  public matcher = new CustomErrorStateMatcher();
 
   constructor(
     private authService: AuthService,

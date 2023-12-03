@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of, tap } from 'rxjs';
+import { Observable, shareReplay, tap } from 'rxjs';
+import { environment } from '../../environments/environment.development';
 
 export type Session = {
   access_token: string;
@@ -11,16 +12,19 @@ export type Session = {
   providedIn: 'root',
 })
 export class AuthService {
+  private readonly url = environment.apiUrl;
+
   constructor(private http: HttpClient) {}
 
   login(email: string, password: string): Observable<Session> {
-    const session: Session = { access_token: 'token', expiresIn: 60 };
-    this.setSession(session);
-
-    return of(session);
-    // return this.http
-    //   .post('/api/login', { email, password })
-    //   .pipe(shareReplay());
+    return this.http
+      .post<Session>(`${this.url}auth/login`, { email, password })
+      .pipe(
+        shareReplay(),
+        tap(resp => {
+          this.setSession(resp);
+        })
+      );
   }
 
   private setSession(authResult: Session) {

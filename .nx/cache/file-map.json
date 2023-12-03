@@ -53,11 +53,19 @@
       },
       {
         "file": ".eslintrc.json",
-        "hash": "14645878845883387518"
+        "hash": "10915151720442425896"
       },
       {
         "file": ".gitignore",
-        "hash": "13044518069027839699"
+        "hash": "2094491833900959609"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "56546360401269645"
+      },
+      {
+        "file": ".prettierrc.json",
+        "hash": "17872221407742934679"
       },
       {
         "file": ".vscode/extensions.json",
@@ -77,19 +85,19 @@
       },
       {
         "file": "angular.json",
-        "hash": "9146568891891923843"
+        "hash": "6340955612620242667"
       },
       {
         "file": "package-lock.json",
-        "hash": "11594608923719757100"
+        "hash": "11825187836836717029"
       },
       {
         "file": "package.json",
-        "hash": "17650908341626816756"
+        "hash": "2834771871062710145"
       },
       {
         "file": "src/app/app.component.html",
-        "hash": "17052117291444037456"
+        "hash": "17385897758380840601"
       },
       {
         "file": "src/app/app.component.scss",
@@ -97,51 +105,95 @@
       },
       {
         "file": "src/app/app.component.spec.ts",
-        "hash": "17318768568777244779"
+        "hash": "9694174552760052235"
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "16459803086286877131"
+        "hash": "12777374078487098405"
       },
       {
         "file": "src/app/app.config.ts",
-        "hash": "10496557306432811410"
+        "hash": "1756344999430469582"
       },
       {
         "file": "src/app/app.routes.ts",
-        "hash": "7832935556479980614"
+        "hash": "10165187277941838419"
+      },
+      {
+        "file": "src/app/constants/routes.constant.ts",
+        "hash": "2032321996563615087"
       },
       {
         "file": "src/app/header/header.component.html",
-        "hash": "13937863950278126757"
+        "hash": "13663466337805643866"
       },
       {
         "file": "src/app/header/header.component.scss",
-        "hash": "1632662562497665402"
+        "hash": "13613571261234934725"
       },
       {
         "file": "src/app/header/header.component.spec.ts",
-        "hash": "18382709109671394819"
+        "hash": "18019974771912921764"
       },
       {
         "file": "src/app/header/header.component.ts",
-        "hash": "7300860399572577738"
+        "hash": "1937736754715284975"
       },
       {
         "file": "src/app/home/home.component.html",
-        "hash": "9207992586225152020"
+        "hash": "1206405069640197127"
       },
       {
         "file": "src/app/home/home.component.scss",
-        "hash": "10383042807542310445"
+        "hash": "18327083783725571800"
       },
       {
         "file": "src/app/home/home.component.spec.ts",
-        "hash": "5533293743300657749"
+        "hash": "12966160379306897241"
       },
       {
         "file": "src/app/home/home.component.ts",
-        "hash": "1045016387057454631"
+        "hash": "205006774329874167"
+      },
+      {
+        "file": "src/app/login/auth.service.spec.ts",
+        "hash": "10697900076114607965"
+      },
+      {
+        "file": "src/app/login/auth.service.ts",
+        "hash": "2085125500527701300"
+      },
+      {
+        "file": "src/app/login/guards/auth.guard.spec.ts",
+        "hash": "12132810063693827441"
+      },
+      {
+        "file": "src/app/login/guards/auth.guard.ts",
+        "hash": "7135574630117085818"
+      },
+      {
+        "file": "src/app/login/guards/login.guard.spec.ts",
+        "hash": "15858010015599883664"
+      },
+      {
+        "file": "src/app/login/guards/login.guard.ts",
+        "hash": "16847321245286701258"
+      },
+      {
+        "file": "src/app/login/login.component.html",
+        "hash": "2288318153621690346"
+      },
+      {
+        "file": "src/app/login/login.component.scss",
+        "hash": "3629152250426493518"
+      },
+      {
+        "file": "src/app/login/login.component.spec.ts",
+        "hash": "13423884664040136397"
+      },
+      {
+        "file": "src/app/login/login.component.ts",
+        "hash": "12028639275433851935"
       },
       {
         "file": "src/assets/.gitkeep",
@@ -153,27 +205,31 @@
       },
       {
         "file": "src/index.html",
-        "hash": "6433183502915036305"
+        "hash": "8181497219640422808"
       },
       {
         "file": "src/main.ts",
-        "hash": "4927504514031276065"
+        "hash": "8060102740304671444"
       },
       {
         "file": "src/styles.scss",
-        "hash": "9525514396149276363"
+        "hash": "312430846558426791"
+      },
+      {
+        "file": "src/theme.scss",
+        "hash": "5018901997856863116"
       },
       {
         "file": "tsconfig.app.json",
-        "hash": "17337579397915052279"
+        "hash": "11674506502668556549"
       },
       {
         "file": "tsconfig.json",
-        "hash": "8074232012119176151"
+        "hash": "15475391348362838860"
       },
       {
         "file": "tsconfig.spec.json",
-        "hash": "15575553540147145788"
+        "hash": "11901043454877211451"
       }
     ]
   }
