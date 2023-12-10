@@ -25,3 +25,17 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  :host {
+    .container {
+      width: 100%;
+
+      form {
+        mat-form-field {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
