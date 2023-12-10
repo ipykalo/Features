@@ -27,6 +27,7 @@ export const routes: Routes = [
     path: RoutesConstant.SIGNU,
     loadComponent: () =>
       import('../signup/signup.component').then(c => c.SignupComponent),
+    canActivate: [loginGuard],
   },
   { path: '', redirectTo: `/${RoutesConstant.Home}`, pathMatch: 'full' },
   { path: RoutesConstant.NOT_FOUND, component: NotFoundComponent },
