@@ -57,7 +57,7 @@
       },
       {
         "file": ".gitignore",
-        "hash": "2094491833900959609"
+        "hash": "492629380662163130"
       },
       {
         "file": ".prettierignore",
@@ -85,7 +85,7 @@
       },
       {
         "file": "angular.json",
-        "hash": "6340955612620242667"
+        "hash": "4649840909178527117"
       },
       {
         "file": "package-lock.json",
@@ -93,11 +93,15 @@
       },
       {
         "file": "package.json",
-        "hash": "2834771871062710145"
+        "hash": "18043248464441817359"
+      },
+      {
+        "file": "src/app/app-routing.module.ts",
+        "hash": "17256418944783307605"
       },
       {
         "file": "src/app/app.component.html",
-        "hash": "17385897758380840601"
+        "hash": "17973684673164000175"
       },
       {
         "file": "src/app/app.component.scss",
@@ -109,19 +113,31 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "12777374078487098405"
+        "hash": "81918690219173561"
       },
       {
-        "file": "src/app/app.config.ts",
-        "hash": "1756344999430469582"
+        "file": "src/app/app.module.ts",
+        "hash": "10270961009364329120"
       },
       {
         "file": "src/app/app.routes.ts",
-        "hash": "10165187277941838419"
+        "hash": "3537091883506562229"
       },
       {
         "file": "src/app/constants/routes.constant.ts",
         "hash": "2032321996563615087"
+      },
+      {
+        "file": "src/app/core/errors/global-error-handler.service.spec.ts",
+        "hash": "11997781494510002678"
+      },
+      {
+        "file": "src/app/core/errors/global-error-handler.service.ts",
+        "hash": "3548502084673175514"
+      },
+      {
+        "file": "src/app/core/forms/error-state-matcher.ts",
+        "hash": "18441988391463955258"
       },
       {
         "file": "src/app/header/header.component.html",
@@ -141,7 +157,7 @@
       },
       {
         "file": "src/app/home/home.component.html",
-        "hash": "1206405069640197127"
+        "hash": "15809976769651676326"
       },
       {
         "file": "src/app/home/home.component.scss",
@@ -153,7 +169,7 @@
       },
       {
         "file": "src/app/home/home.component.ts",
-        "hash": "205006774329874167"
+        "hash": "11269402730077452516"
       },
       {
         "file": "src/app/login/auth.service.spec.ts",
@@ -161,7 +177,7 @@
       },
       {
         "file": "src/app/login/auth.service.ts",
-        "hash": "2085125500527701300"
+        "hash": "6975331795539455777"
       },
       {
         "file": "src/app/login/guards/auth.guard.spec.ts",
@@ -169,7 +185,7 @@
       },
       {
         "file": "src/app/login/guards/auth.guard.ts",
-        "hash": "7135574630117085818"
+        "hash": "4765312142926777630"
       },
       {
         "file": "src/app/login/guards/login.guard.spec.ts",
@@ -177,7 +193,7 @@
       },
       {
         "file": "src/app/login/guards/login.guard.ts",
-        "hash": "16847321245286701258"
+        "hash": "471720691156905787"
       },
       {
         "file": "src/app/login/login.component.html",
@@ -193,11 +209,87 @@
       },
       {
         "file": "src/app/login/login.component.ts",
-        "hash": "12028639275433851935"
+        "hash": "518100403582161711"
+      },
+      {
+        "file": "src/app/services/loader.service.spec.ts",
+        "hash": "13544108635433781881"
+      },
+      {
+        "file": "src/app/services/loader.service.ts",
+        "hash": "1990794467729909821"
+      },
+      {
+        "file": "src/app/shared/errors/error-dialog/error-dialog.component.html",
+        "hash": "6231339889198171757"
+      },
+      {
+        "file": "src/app/shared/errors/error-dialog/error-dialog.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/shared/errors/error-dialog/error-dialog.component.spec.ts",
+        "hash": "5797938520186620819"
+      },
+      {
+        "file": "src/app/shared/errors/error-dialog/error-dialog.component.ts",
+        "hash": "4686049564092428418"
+      },
+      {
+        "file": "src/app/shared/errors/error-dialog.service.spec.ts",
+        "hash": "11143113129414866507"
+      },
+      {
+        "file": "src/app/shared/errors/error-dialog.service.ts",
+        "hash": "11308077573185159710"
+      },
+      {
+        "file": "src/app/shared/interceptors/auth.interceptor.spec.ts",
+        "hash": "8977071335741638093"
+      },
+      {
+        "file": "src/app/shared/interceptors/auth.interceptor.ts",
+        "hash": "8175584503996095657"
+      },
+      {
+        "file": "src/app/shared/interceptors/components/spinner/spinner.component.html",
+        "hash": "12307787570827364871"
+      },
+      {
+        "file": "src/app/shared/interceptors/components/spinner/spinner.component.scss",
+        "hash": "8740281759554910875"
+      },
+      {
+        "file": "src/app/shared/interceptors/components/spinner/spinner.component.spec.ts",
+        "hash": "5867588040630611232"
+      },
+      {
+        "file": "src/app/shared/interceptors/components/spinner/spinner.component.ts",
+        "hash": "6960403962226803948"
+      },
+      {
+        "file": "src/app/shared/interceptors/loader.interceptor.spec.ts",
+        "hash": "3537289548725043216"
+      },
+      {
+        "file": "src/app/shared/interceptors/loader.interceptor.ts",
+        "hash": "14596298005913127321"
+      },
+      {
+        "file": "src/app/shared/shared.module.ts",
+        "hash": "17322714602164422722"
       },
       {
         "file": "src/assets/.gitkeep",
         "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/environments/environment.development.ts",
+        "hash": "9526987246023313142"
+      },
+      {
+        "file": "src/environments/environment.ts",
+        "hash": "14072365094566120661"
       },
       {
         "file": "src/favicon.ico",
@@ -209,7 +301,7 @@
       },
       {
         "file": "src/main.ts",
-        "hash": "8060102740304671444"
+        "hash": "5592052171869601298"
       },
       {
         "file": "src/styles.scss",
