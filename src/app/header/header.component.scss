@@ -32,5 +32,16 @@
         }
       }
     }
+
+    .logout {
+      &:hover {
+        color: #b1caf1;
+        cursor: pointer;
+      }
+
+      &:active {
+        color: #5290ee;
+      }
+    }
   }
 }

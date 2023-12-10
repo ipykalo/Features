@@ -9,14 +9,20 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { AuthService, Session } from './auth.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { RoutesConstant } from '../constants/routes.constant';
 import { CustomErrorStateMatcher } from '../core/forms/error-state-matcher';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, MatInputModule, MatButtonModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
+    RouterLink,
+  ],
   providers: [],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
@@ -34,7 +40,7 @@ export class LoginComponent {
     private router: Router
   ) {}
 
-  login(): void {
+  onLogin(): void {
     const { email, password } = this.form.getRawValue();
     if (!email || !password) {
       return;

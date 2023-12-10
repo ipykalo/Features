@@ -4,6 +4,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { HeaderComponent } from '../header/header.component';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterOutlet } from '@angular/router';
+import { AuthService } from '../login/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -19,4 +20,10 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent {}
+export class HomeComponent {
+  constructor(private authService: AuthService) {}
+
+  onLogout(): void {
+    this.authService.logout();
+  }
+}

@@ -11,4 +11,5 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class HeaderComponent {
   @Output() toggleMenu: EventEmitter<void> = new EventEmitter();
+  @Output() logout: EventEmitter<void> = new EventEmitter();
 }
