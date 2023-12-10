@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
-import { authGuard } from '../login/guards/auth.guard';
-import { loginGuard } from '../login/guards/login.guard';
+import { authGuard } from '../guards/auth.guard';
+import { loginGuard } from '../guards/login.guard';
 
 export const RoutesConstant = {
   LOGIN: 'login',

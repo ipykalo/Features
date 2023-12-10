@@ -1,7 +1,7 @@
 import { CanActivateFn, Router } from '@angular/router';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../login/auth.service';
 import { inject } from '@angular/core';
-import { RoutesConstant } from '../../constants/routes.constant';
+import { RoutesConstant } from '../constants/routes.constant';
 
 export const loginGuard: CanActivateFn = (route, state): boolean => {
   const authService: AuthService = inject(AuthService);

@@ -4,7 +4,7 @@ import {
   HttpInterceptor,
   HttpRequest,
 } from '@angular/common/http';
-import { LoaderService } from '../../services/loader.service';
+import { LoaderService } from '../shared/services/loader.service';
 import { Observable, finalize } from 'rxjs';
 import { Injectable } from '@angular/core';
 

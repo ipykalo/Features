@@ -1,5 +1,5 @@
 import { ErrorHandler, Injectable, NgZone } from '@angular/core';
-import { ErrorDialogService } from '../dialogs/error-dialog.service';
+import { ErrorDialogService } from '../shared/services/error-dialog.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Injectable({
@@ -12,16 +12,28 @@ export class GlobalErrorHandlerService implements ErrorHandler {
   ) {}
 
   handleError(error: any): void {
-    // Check if it's an error from an HTTP response
-    if (!(error instanceof HttpErrorResponse)) {
-      error = error.rejection; // get the error object
-    }
+    const message: string = this.extractMessage(error);
+    const status = error.status ?? '';
+
     this.zone.run(() =>
       this.errorDialogService.openDialog(
-        error?.message || 'Undefined client error'
+        message || 'Undefined client error',
+        status
       )
     );
 
     console.error('Error from global error handler', error);
+  }
+
+  private extractMessage(error: any): string {
+    const err = error.error ?? error;
+    let message = '';
+
+    if (Array.isArray(err.message)) {
+      message = err.message.join(';');
+    } else {
+      message = err.message;
+    }
+    return message;
   }
 }
