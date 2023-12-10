@@ -7,6 +7,7 @@ export class CustomErrorStateMatcher implements CustomErrorStateMatcher {
     form: FormGroupDirective | NgForm | null
   ): boolean {
     const isSubmitted = form && form.submitted;
+
     return !!(
       control &&
       control.invalid &&

@@ -12,6 +12,7 @@ import {
 import { Router } from '@angular/router';
 import { AuthService } from '../login/auth.service';
 import { RoutesConstant } from '../constants/routes.constant';
+import { CustomErrorStateMatcher } from '../core/forms/error-state-matcher';
 
 @Component({
   selector: 'app-signup',
@@ -29,7 +30,8 @@ import { RoutesConstant } from '../constants/routes.constant';
 export class SignupComponent {
   private fb: FormBuilder = inject(FormBuilder);
 
-  form: FormGroup = this.fb.group({
+  public matcher = new CustomErrorStateMatcher();
+  public form: FormGroup = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]],
     firstName: ['', Validators.required],
