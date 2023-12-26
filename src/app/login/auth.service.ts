@@ -4,6 +4,7 @@ import { Observable, shareReplay, tap } from 'rxjs';
 import { environment } from '../../environments/environment.development';
 import { Router } from '@angular/router';
 import { RoutesConstant } from '../constants/routes.constant';
+import { DecodedToken } from '../shared/types/decoded-token.type';
 
 export type Session = {
   access_token: string;
@@ -62,12 +63,29 @@ export class AuthService {
     return new Date(expiresAt).valueOf();
   }
 
-  private setSession(authResult: Session) {
+  getTokenData(value?: string): DecodedToken | null {
+    const token: string | null = value || localStorage.getItem('access_token');
+
+    if (!token) {
+      return null;
+    }
+    return this.decodeToken(token);
+  }
+
+  private setSession(authResult: Session): void {
     const date = new Date();
     date.setSeconds(date.getSeconds() + authResult.expiresIn);
     const expiresAt = date.valueOf();
 
     localStorage.setItem('access_token', authResult.access_token);
     localStorage.setItem('expires_at', JSON.stringify(expiresAt));
+  }
+
+  private decodeToken(token: string): DecodedToken | null {
+    try {
+      return JSON.parse(atob(token.split('.')[1]));
+    } catch (error) {
+      return null;
+    }
   }
 }

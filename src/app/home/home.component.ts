@@ -5,6 +5,7 @@ import { HeaderComponent } from '../header/header.component';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterOutlet } from '@angular/router';
 import { AuthService } from '../login/auth.service';
+import { UserComponent } from '../user/user.component';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ import { AuthService } from '../login/auth.service';
     HeaderComponent,
     MatButtonModule,
     RouterOutlet,
+    UserComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
