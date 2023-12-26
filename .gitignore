@@ -29,7 +29,7 @@ yarn-error.log
 .history/
 
 # NX
-/.nx/cache
+.nx/
 
 # Miscellaneous
 /.angular/cache
