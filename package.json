@@ -8,8 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
+    "serve:prerender": "http-server -c-1 dist/profile/browser",
     "dev:ssr": "ng run profile:serve-ssr",
-    "serve:ssr": "node dist/profile/server/server.mjs",
+    "serve:ssr": "node dist/profile/server/main.js",
     "build:ssr": "ng build && ng run profile:server",
     "prerender": "ng run profile:prerender"
   },
