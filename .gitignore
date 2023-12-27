@@ -28,8 +28,6 @@ yarn-error.log
 !.vscode/extensions.json
 .history/
 
-
-
 # Miscellaneous
 /.angular/cache
 .sass-cache/
@@ -44,7 +42,7 @@ testem.log
 Thumbs.db
 
 #NX
-.nx/cache
+/.nx/cache
 .nx/cache/file-map.json
 .nx/cache/file-map.json
 .nx/cache/parsed-lock-file.json
