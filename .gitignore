@@ -28,8 +28,7 @@ yarn-error.log
 !.vscode/extensions.json
 .history/
 
-# NX
-.nx/
+
 
 # Miscellaneous
 /.angular/cache
@@ -43,3 +42,12 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+#NX
+.nx/cache
+.nx/cache/file-map.json
+.nx/cache/file-map.json
+.nx/cache/parsed-lock-file.json
+.nx/cache/file-map.json
+.nx/cache/parsed-lock-file.json
+.nx/cache/project-graph.json
