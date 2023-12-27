@@ -5,6 +5,7 @@ import { environment } from '../../environments/environment.development';
 import { Router } from '@angular/router';
 import { RoutesConstant } from '../constants/routes.constant';
 import { DecodedToken } from '../shared/types/decoded-token.type';
+import { BrowserStorageService } from '../services/browser-storage.service';
 
 export type Session = {
   access_token: string;
@@ -19,7 +20,8 @@ export class AuthService {
 
   constructor(
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    private browserStorageService: BrowserStorageService
   ) {}
 
   public isLoggedIn(): boolean {
@@ -46,8 +48,8 @@ export class AuthService {
   }
 
   logout(): void {
-    localStorage.removeItem('access_token');
-    localStorage.removeItem('expires_at');
+    this.browserStorageService.remove('access_token');
+    this.browserStorageService.remove('expires_at');
 
     this.router.navigateByUrl(RoutesConstant.LOGIN);
   }
@@ -57,14 +59,14 @@ export class AuthService {
   }
 
   getExpiration(): number {
-    const expiration = localStorage.getItem('expires_at');
+    const expiration = this.browserStorageService.get('expires_at');
     const expiresAt = JSON.parse(expiration as string);
 
     return new Date(expiresAt).valueOf();
   }
 
   getTokenData(value?: string): DecodedToken | null {
-    const token: string | null = value || localStorage.getItem('access_token');
+    const token: string | null = value || this.browserStorageService.get('access_token');
 
     if (!token) {
       return null;
@@ -77,8 +79,8 @@ export class AuthService {
     date.setSeconds(date.getSeconds() + authResult.expiresIn);
     const expiresAt = date.valueOf();
 
-    localStorage.setItem('access_token', authResult.access_token);
-    localStorage.setItem('expires_at', JSON.stringify(expiresAt));
+    this.browserStorageService.set('access_token', authResult.access_token);
+    this.browserStorageService.set('expires_at', JSON.stringify(expiresAt));
   }
 
   private decodeToken(token: string): DecodedToken | null {

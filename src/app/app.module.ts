@@ -9,11 +9,13 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
 import { GlobalErrorHandlerService } from './services/global-error-handler.service';
+import { BrowserStorageService } from './services/browser-storage.service';
 
 @NgModule({
   declarations: [AppComponent],
   bootstrap: [AppComponent],
   providers: [
+    BrowserStorageService,
     { provide: ErrorHandler, useClass: GlobalErrorHandlerService },
     { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
