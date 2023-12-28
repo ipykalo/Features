@@ -3,15 +3,21 @@ import { HomeComponent } from '../home/home.component';
 import { authGuard } from '../guards/auth.guard';
 import { loginGuard } from '../guards/login.guard';
 import { NotFoundComponent } from '../shared/components/not-found/not-found.component';
+import { BlogComponent } from '../blog/blog.component';
 
 export const RoutesConstant = {
   LOGIN: 'login',
   SIGNU: 'signup',
   Home: 'home',
+  BLOG: 'blog',
   NOT_FOUND: 'not-found',
 };
 
 export const routes: Routes = [
+  {
+    path: RoutesConstant.BLOG,
+    component: BlogComponent,
+  },
   {
     path: RoutesConstant.Home,
     component: HomeComponent,
@@ -29,7 +35,7 @@ export const routes: Routes = [
       import('../signup/signup.component').then(c => c.SignupComponent),
     canActivate: [loginGuard],
   },
-  { path: '', redirectTo: `/${RoutesConstant.Home}`, pathMatch: 'full' },
+  { path: '', redirectTo: `/${RoutesConstant.BLOG}`, pathMatch: 'full' },
   { path: RoutesConstant.NOT_FOUND, component: NotFoundComponent },
   { path: '**', redirectTo: RoutesConstant.NOT_FOUND },
 ];

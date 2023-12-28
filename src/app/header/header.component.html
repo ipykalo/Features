@@ -1,9 +1,16 @@
 <header>
   <div class="menu-logo">
-    <mat-icon class="menu" (click)="toggleMenu.emit()">menu</mat-icon>
+    @if (showMenu) {
+      <mat-icon class="menu" (click)="toggleMenu.emit()">menu</mat-icon>
+    }
     <span>Logo</span>
   </div>
   <div>
-    <mat-icon class="logout" (click)="logout.emit()">logout</mat-icon>
+    @if (showLogout) {
+      <mat-icon class="logout" (click)="logout.emit()">logout</mat-icon>
+    }
+    @if (showLogin) {
+      <mat-icon class="login" (click)="login.emit()">login</mat-icon>
+    }
   </div>
 </header>

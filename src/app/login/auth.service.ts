@@ -54,6 +54,10 @@ export class AuthService {
     this.router.navigateByUrl(RoutesConstant.LOGIN);
   }
 
+  navigateToLogin(): void {
+    this.router.navigateByUrl(RoutesConstant.LOGIN);
+  }
+
   isLoggedOut(): boolean {
     return !this.isLoggedIn();
   }
@@ -66,7 +70,8 @@ export class AuthService {
   }
 
   getTokenData(value?: string): DecodedToken | null {
-    const token: string | null = value || this.browserStorageService.get('access_token');
+    const token: string | null =
+      value || this.browserStorageService.get('access_token');
 
     if (!token) {
       return null;

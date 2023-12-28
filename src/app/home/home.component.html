@@ -1,4 +1,10 @@
-<app-header (toggleMenu)="sidenav.toggle()" (logout)="onLogout()"></app-header>
+<app-header
+  [showMenu]="true"
+  [showLogout]="true"
+  [showLogin]="false"
+  (toggleMenu)="sidenav.toggle()"
+  (logout)="onLogout()">
+</app-header>
 <mat-sidenav-container [hasBackdrop]="true" class="sidenav-container">
   <mat-sidenav
     #sidenav
