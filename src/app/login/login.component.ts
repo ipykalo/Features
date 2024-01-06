@@ -10,8 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { AuthService, Session } from './auth.service';
 import { Router, RouterLink } from '@angular/router';
-import { RoutesConstant } from '../constants/routes.constant';
 import { CustomErrorStateMatcher } from '../core/forms/error-state-matcher';
+import { RoutesConstant } from '../app.routes';
 
 @Component({
   selector: 'app-login',

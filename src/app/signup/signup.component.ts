@@ -11,8 +11,8 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../login/auth.service';
-import { RoutesConstant } from '../constants/routes.constant';
 import { CustomErrorStateMatcher } from '../core/forms/error-state-matcher';
+import { RoutesConstant } from '../app.routes';
 
 @Component({
   selector: 'app-signup',

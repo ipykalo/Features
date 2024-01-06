@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 import { Observable, shareReplay, tap } from 'rxjs';
 import { environment } from '../../environments/environment.development';
 import { Router } from '@angular/router';
-import { RoutesConstant } from '../constants/routes.constant';
 import { DecodedToken } from '../shared/types/decoded-token.type';
 import { BrowserStorageService } from '../services/browser-storage.service';
+import { RoutesConstant } from '../app.routes';
 
 export type Session = {
   access_token: string;

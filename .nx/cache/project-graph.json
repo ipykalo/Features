@@ -6967,15 +6967,6 @@
         "hash": "sha512-3R/1M+yS3j5ou80Me59j7F9IMs4PXs3VqRrm0TU3AbKPxlmpoY1TNscJV/oGJXo8qCatFGTfDbY6W6ipGOYXfg=="
       }
     },
-    "npm:localstorage-polyfill": {
-      "type": "npm",
-      "name": "npm:localstorage-polyfill",
-      "data": {
-        "version": "1.0.1",
-        "packageName": "localstorage-polyfill",
-        "hash": "sha512-m4iHVZxFH5734oQcPKU08025gIz2+4bjWR9lulP8ZYxEJR0BpA0w32oJmkzh8y3UI9ci7xCBehQDc3oA1X+VHw=="
-      }
-    },
     "npm:localtunnel": {
       "type": "npm",
       "name": "npm:localtunnel",

@@ -17,7 +17,6 @@
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.2",
     "express": "^4.18.2",
-    "localstorage-polyfill": "^1.0.1",
     "rxjs": "~7.8.0",
     "schematics-scss-migrate": "^2.3.17",
     "tslib": "^2.3.0",
@@ -63,7 +62,7 @@
       },
       {
         "file": ".gitignore",
-        "hash": "492629380662163130"
+        "hash": "7451060661876944906"
       },
       {
         "file": ".prettierignore",
@@ -87,19 +86,23 @@
       },
       {
         "file": "README.md",
-        "hash": "1556790000674385531"
+        "hash": "4557830343144829216"
       },
       {
         "file": "angular.json",
-        "hash": "10803062632160009478"
+        "hash": "6389519933362447515"
       },
       {
         "file": "package-lock.json",
-        "hash": "17392661896795494725"
+        "hash": "13148077938287881433"
       },
       {
         "file": "package.json",
-        "hash": "5377958559351369941"
+        "hash": "10001092132801470906"
+      },
+      {
+        "file": "server.ts",
+        "hash": "18189442272577089872"
       },
       {
         "file": "src/app/app-routing.module.ts",
@@ -115,19 +118,39 @@
       },
       {
         "file": "src/app/app.component.spec.ts",
-        "hash": "6888639395700069758"
+        "hash": "1170136627979486233"
       },
       {
         "file": "src/app/app.component.ts",
         "hash": "10449039556846996522"
       },
       {
+        "file": "src/app/app.module.server.ts",
+        "hash": "10170151101885734607"
+      },
+      {
         "file": "src/app/app.module.ts",
-        "hash": "4071518427182319084"
+        "hash": "9313740534914194062"
+      },
+      {
+        "file": "src/app/blog/blog.component.html",
+        "hash": "11056913427150138591"
+      },
+      {
+        "file": "src/app/blog/blog.component.scss",
+        "hash": "15441479731698227438"
+      },
+      {
+        "file": "src/app/blog/blog.component.spec.ts",
+        "hash": "7741210589762185757"
+      },
+      {
+        "file": "src/app/blog/blog.component.ts",
+        "hash": "1424903506875337514"
       },
       {
         "file": "src/app/constants/routes.constant.ts",
-        "hash": "13117461237671609476"
+        "hash": "1785498799030893034"
       },
       {
         "file": "src/app/core/forms/error-state-matcher.ts",
@@ -139,7 +162,7 @@
       },
       {
         "file": "src/app/guards/auth.guard.ts",
-        "hash": "10456707460706468246"
+        "hash": "11203499433366703809"
       },
       {
         "file": "src/app/guards/login.guard.spec.ts",
@@ -151,11 +174,11 @@
       },
       {
         "file": "src/app/header/header.component.html",
-        "hash": "14196959954288247573"
+        "hash": "9676073963197396048"
       },
       {
         "file": "src/app/header/header.component.scss",
-        "hash": "15581381575369685625"
+        "hash": "16096934285355604090"
       },
       {
         "file": "src/app/header/header.component.spec.ts",
@@ -163,11 +186,11 @@
       },
       {
         "file": "src/app/header/header.component.ts",
-        "hash": "12920331768381308172"
+        "hash": "10064850795845090498"
       },
       {
         "file": "src/app/home/home.component.html",
-        "hash": "15745209927550951960"
+        "hash": "2989865486538784799"
       },
       {
         "file": "src/app/home/home.component.scss",
@@ -179,7 +202,7 @@
       },
       {
         "file": "src/app/home/home.component.ts",
-        "hash": "3383820521033108447"
+        "hash": "15890603715381964656"
       },
       {
         "file": "src/app/interceptors/auth.interceptor.spec.ts",
@@ -187,7 +210,7 @@
       },
       {
         "file": "src/app/interceptors/auth.interceptor.ts",
-        "hash": "15516401606014274323"
+        "hash": "1114850102963119965"
       },
       {
         "file": "src/app/interceptors/loader.interceptor.spec.ts",
@@ -203,11 +226,11 @@
       },
       {
         "file": "src/app/login/auth.service.ts",
-        "hash": "16368500528317478788"
+        "hash": "11300189875907903176"
       },
       {
         "file": "src/app/login/login.component.html",
-        "hash": "6558122041515918713"
+        "hash": "11917927246798146031"
       },
       {
         "file": "src/app/login/login.component.scss",
@@ -222,6 +245,22 @@
         "hash": "10913429727840649792"
       },
       {
+        "file": "src/app/services/browser-storage-server.service.spec.ts",
+        "hash": "710987995064977600"
+      },
+      {
+        "file": "src/app/services/browser-storage-server.service.ts",
+        "hash": "13628850614262603702"
+      },
+      {
+        "file": "src/app/services/browser-storage.service.spec.ts",
+        "hash": "18360442008359435360"
+      },
+      {
+        "file": "src/app/services/browser-storage.service.ts",
+        "hash": "7762815980377579680"
+      },
+      {
         "file": "src/app/services/global-error-handler.service.spec.ts",
         "hash": "11997781494510002678"
       },
@@ -231,7 +270,7 @@
       },
       {
         "file": "src/app/shared/components/error-dialog/error-dialog.component.html",
-        "hash": "5554496977338451873"
+        "hash": "4939627851760548808"
       },
       {
         "file": "src/app/shared/components/error-dialog/error-dialog.component.scss",
@@ -298,6 +337,10 @@
         "hash": "5804915315489401394"
       },
       {
+        "file": "src/app/shared/types/decoded-token.type.ts",
+        "hash": "12176953080134180718"
+      },
+      {
         "file": "src/app/signup/signup.component.html",
         "hash": "13384664521573018551"
       },
@@ -312,6 +355,38 @@
       {
         "file": "src/app/signup/signup.component.ts",
         "hash": "182576303569049012"
+      },
+      {
+        "file": "src/app/user/proficiency-level.enum.ts",
+        "hash": "10542962355155541676"
+      },
+      {
+        "file": "src/app/user/user.component.html",
+        "hash": "2890978942471202577"
+      },
+      {
+        "file": "src/app/user/user.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/user/user.component.spec.ts",
+        "hash": "6110538608553718612"
+      },
+      {
+        "file": "src/app/user/user.component.ts",
+        "hash": "7006026733480832657"
+      },
+      {
+        "file": "src/app/user/user.service.spec.ts",
+        "hash": "5664179134821074798"
+      },
+      {
+        "file": "src/app/user/user.service.ts",
+        "hash": "13906923343859437253"
+      },
+      {
+        "file": "src/app/user/user.type.ts",
+        "hash": "18069748189309435509"
       },
       {
         "file": "src/assets/.gitkeep",
@@ -331,11 +406,19 @@
       },
       {
         "file": "src/index.html",
-        "hash": "9164278364279543475"
+        "hash": "14014933172785183527"
+      },
+      {
+        "file": "src/main.server.ts",
+        "hash": "5318678666866329704"
       },
       {
         "file": "src/main.ts",
         "hash": "14231999854359791567"
+      },
+      {
+        "file": "src/polyfills.ts",
+        "hash": "17998429198418087151"
       },
       {
         "file": "src/styles.scss",
@@ -343,11 +426,15 @@
       },
       {
         "file": "tsconfig.app.json",
-        "hash": "11674506502668556549"
+        "hash": "2138947674391732801"
       },
       {
         "file": "tsconfig.json",
         "hash": "15475391348362838860"
+      },
+      {
+        "file": "tsconfig.server.json",
+        "hash": "3993376415530873156"
       },
       {
         "file": "tsconfig.spec.json",
