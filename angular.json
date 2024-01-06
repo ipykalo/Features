@@ -29,7 +29,12 @@
               "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -89,7 +94,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "polyfills": ["zone.js"],
-            "tsConfig": "tsconfig.spec.json",
+            "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "@angular/material/prebuilt-themes/pink-bluegrey.css",
@@ -109,7 +114,7 @@
           "options": {
             "outputPath": "dist/profile/server",
             "main": "server.ts",
-            "tsConfig": "tsconfig.server.json",
+            "tsConfig": "tsconfig.app.json",
             "buildOptimizer": false,
             "optimization": false,
             "sourceMap": true,
@@ -162,7 +167,7 @@
         "prerender": {
           "builder": "@angular-devkit/build-angular:prerender",
           "options": {
-            "routes": ["/", "/blog"]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {

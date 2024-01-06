@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "dev:ssr": "ng run profile:serve-ssr",
     "serve:ssr": "node dist/profile/server/main.js",
-    "build:ssr": "ng build --prod && ng run profile:server",
+    "build:ssr": "ng build && ng run profile:server",
     "prerender": "ng run profile:prerender",
     "serve:prerender": "http-server -c-1 dist/profile/browser"
   },
